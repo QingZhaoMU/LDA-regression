@@ -14,7 +14,7 @@ nms <- 1
 nmb <- 1000
 
 nl <- 2000
-nl.miss <- round(nl * 0)
+nl.miss <- round(nl * 0) # determine the proportion of sites with presence only data
 niter <- 10000
 nburn <- round(niter * .5)
 
@@ -232,7 +232,7 @@ omega.post <- array(, dim=c(nc.max, nb, niter))
 omega.post[,,1] <- param$omega
 
 for (i in 2:niter) {
-  theta.up <- update.theta(param, jump=.1, nl, nc.max, y, w, nms, nmb, gamma=.1)
+  theta.up <- update.theta(param, jump=.1, nl, nc.max, y, w, nms, nmb, gamma=gamma)
   param$theta <- theta.up$theta
   param$vmat <- theta.up$vmat
   theta.post[,,i] <- param$theta
