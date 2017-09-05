@@ -1,0 +1,1 @@
+This branch contains codes of simulation studies that aim to evaluate the performance of several approaches to incorporate auxiliary information (e.g. covariates, remote sensing data) into Latent Dirichlet Allocation models.
