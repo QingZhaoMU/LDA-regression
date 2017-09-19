@@ -200,5 +200,3 @@ plot(phi.accept.rate[1,], type='n', ylim=range(phi.accept.rate[1:nc,]))
 for (i in 1:nc) {
   lines(phi.accept.rate[i,], col=i)
 }
-
-
