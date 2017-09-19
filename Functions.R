@@ -205,4 +205,3 @@ betasigma.jumpTune <- function(accept, jump, ni, adapt=2000, low=.3, high=.8) {
   jump <- jump.new
   list(jump=jump)
 } # sigma.jumpTune
-
