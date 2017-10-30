@@ -59,7 +59,7 @@ update.theta <- function(param, jump, nl, nc, ns, y, x, nmat, id.perf) {
   beta <- param$beta
   mu <- x %*% beta
   pobs <- param$pobs
-  pobs.mat <- matrix(pobs, nl, ns)
+  pobs.mat <- matrix(pobs, nl, ns, byrow=TRUE)
   pobs.mat[id.perf,] <- 1
 
   vmat.ori <- vmat.old <- param$vmat
@@ -91,7 +91,7 @@ update.theta <- function(param, jump, nl, nc, ns, y, x, nmat, id.perf) {
 update.phi <- function(param, jump, nl, nc, ns, y, nmat, id.perf, a.phi, b.phi) {
   theta <- param$theta
   pobs <- param$pobs
-  pobs.mat <- matrix(pobs, nl, ns)
+  pobs.mat <- matrix(pobs, nl, ns, byrow=TRUE)
   pobs.mat[id.perf,] <- 1
 
   phi.ori <- phi.old <- param$phi
