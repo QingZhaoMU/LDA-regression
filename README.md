@@ -1,3 +1,2 @@
-# LDA-regression
-I incorporate covariates in Latent Dirichlet Allocation models through multinomial logistic regressions.
-The work includes both simulations and a case study of Alberta plants.
+# Alberta plants with LDA-regression
+I used LDA-regression models to decompose Alberta plants into species groups, explain group distributions with environmental variables (e.g. climate, habitat type, human footprint), and predict the distributions of each group and each species.
